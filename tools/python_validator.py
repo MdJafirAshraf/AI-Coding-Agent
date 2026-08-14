@@ -1,3 +1,6 @@
+from langchain_core.tools import tool
+
+@tool
 def validate_python_syntax(code: str) -> dict:
     """
     Validate Python syntax without executing the code.

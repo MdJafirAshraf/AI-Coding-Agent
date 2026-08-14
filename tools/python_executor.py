@@ -2,8 +2,9 @@ import subprocess
 import sys
 import tempfile
 from pathlib import Path
+from langchain_core.tools import tool
 
-
+@tool
 def execute_python(
     code: str,
     timeout: int = 5,

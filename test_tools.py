@@ -2,13 +2,18 @@ from tools import execute_python, validate_python_syntax
 
 
 code = """
-numbers = [10, 20, 30]
+def calculate_average(numbers):
+    if not numbers:
+        return 0
+    total = sum(numbers)
+    average = total / len(numbers)
+    return total, average
 
-total = sum(numbers)
-average = total / len(numbers)
-
-print("Total:", total)
-print("Average:", average)
+if __name__ == "__main__":
+    numbers = [10, 20, 30, 40, 50]
+    total, average = calculate_average(numbers)
+    print(f"Total: {total}")
+    print(f"Average: {average}")
 """
 
 
